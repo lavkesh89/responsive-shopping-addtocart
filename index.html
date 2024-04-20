@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>single page shopping e-commerce site</title>
+</head>
+
+<body>
+    <div class="container1">
+        <div class="container">
+            <div class="image-container">
+                <img src="women.jpg" alt="Woman Image">
+                <hr class="">
+            </div>
+
+            <div class="thumbnails">
+                <div class="TN-img">
+                    <img class="imaginate" src="thumbnail.jpg" alt="Thumbnail">
+                    <img class="imaginate" src="thumbnails1.jpg" alt="Thumbnail">
+                    <img class="imaginate" src="thumbnails2.jpg" alt="Thumbnail">
+                    <img class="imaginate" src="thumbnails3.jpg" alt="Thumbnail">
+                </div>
+            </div>
+            <div class="details">
+                <h2>Embrace Sideboard</h2>
+                <hr class="horzon-line">
+                <p class="price">$12999.00 <span class="discount">35% OFF</span></p>
+                <p class="original-price">$19999.00</p>
+                <hr class="horzon-line">
+
+                <div class="color-options" required="">CHOOSE COLOR:
+                    <span class="color-option" data-color="Light Gray" style="background-color: #ec607f;"
+                        onclick="selectColor(this)"></span>
+                    <span class="color-option" data-color="Olive Green" style="background-color: #a9c43a;"
+                        onclick="selectColor(this)"></span>
+                    <span class="color-option" data-color="Purple" style="background-color: #a672c6;"
+                        onclick="selectColor(this)"></span>
+                    <span class="color-option" data-color="Light Pink" style="background-color: #c67000;"
+                        onclick="selectColor(this)"></span>
+                    <span class="color-option" data-color="Light Gray" style="background-color: #1305af;"
+                        onclick="selectColor(this)"></span>
+                </div>
+                <hr class="horzon-line">
+
+                <div class="size-options" required="">CHOOSE SIZE:
+                    <input type="radio" id="small" name="size" value="small" checked>
+                    <label for="small">SMALL</label>
+                    <input type="radio" id="medium" name="size" value="medium">
+                    <label for="medium">MEDIUM</label>
+                    <input type="radio" id="large" name="size" value="large">
+                    <label for="large">LARGE</label>
+                    <input type="radio" id="xlarge" name="size" value="xlarge">
+                    <label for="xlarge">X Large</label>
+                    <input type="radio" id="xxl" name="size" value="xxl">
+                    <label for="xxl">XXL</label>
+                </div>
+                <hr class="horzon-line">
+                <div class="quantity-container">QUANTITY:
+                    <button class="quantity-btn1" onclick="decrementQuantity()">-</button>
+                    <span class="quantity" id="quantity">1</span>
+                    <button class="quantity-btn" onclick="incrementQuantity()">+</button>
+                </div>
+                <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+                <hr class="horzon-line">
+                <p class="description">The Embrace Sideboard is a timeless work of art in itself. With a top cloth
+                    designed to provide superior protection and look great, this element solution is both functional and
+                    attractive. It fits into any home decor, with clean lines and a sleek. Crafted from premium
+                    materials for a combination of style, durability, and reliability.</p>
+            </div>
+
+            
+        </div>
+
+        <div class="icon-cart" onclick="openCart()">
+            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M6 15a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm0 0h8m-8 0-1-4m9 4a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-9-4h10l2-7H3m2 7L3 4m0 0-.792-3H1" />
+            </svg>
+            <span>0</span>
+        </div>
+        
+        <section class="cart-sidebar">
+            <div>
+            <div class="cart-header">
+                <h1>SHOPPING CART</h1>
+                <hr>            
+            </div>
+            </div>
+
+            <div class="cart-items"></div>
+
+            <div class="cart-total">
+                <p class="etc">Total: $0.00</p>
+            </div>
+
+            <button class="close-cart" onclick="closeCart()">Close</button>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
